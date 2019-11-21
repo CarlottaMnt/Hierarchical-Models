@@ -1,0 +1,19 @@
+#NO POOLING
+#The code allow to estimate the regression parameters of a Poisson generalized linear model with log link function.
+#The main characteristic of this model is that given the presence of several groups (15 municipalities) this are considered as independent.
+
+
+#Import packages
+
+library(pacman)
+p_load(dplyr,summarytools, tidyr, readxl, writexl, ggplot2, forcats, sjlabelled,
+       here, hablar, naniar, devtools, stringr, splitstackshape,
+       validate,ggrepel,DataExplorer,rethinking, psycho, tidybayes,shinystan,bayesplot,matrixStats)
+
+#Remove missing values
+
+data <- data[complete.cases(data),]
+
+#Select response variable
+
+
