@@ -1,0 +1,27 @@
+#NO POOLING: GROUP ARE ASSUMED INDEPENDENT
+#The code is used for estimating the parameters of a logistic regression assuming the fifteen municipalities as independent.
+#The response variable is binary hence the likelihood distribution assigned is a Bernoulli distribution.
+#The prior distribution assigned are all weakly informative
+#I rescale the explanatory variables in order to facilitate the computation for the alghoritm: given the assumption of independence
+#I rescale each explanatory variables dividing for the standard deviation registered within each municipality.
+
+#Import the required package
+library(pacman)
+p_load(dplyr,summarytools, tidyr, readxl, writexl, ggplot2, forcats, sjlabelled,
+       here, hablar, naniar, devtools, stringr, splitstackshape,
+       validate,ggrepel,DataExplorer,rethinking, psycho, tidybayes,shinystan,bayesplot,matrixStats)
+
+#Remove missing values
+data <- data[complete.cases(data),]
+
+#Select the response variable
+y <-data$app_yn
+
+#Select and rescale the explanatory variables
+x_nopool<- data %>% group_by(gen_6_municip) %>% 
+  mutate_at(
+    c("se1_6_educ","se3_6_nrdwelrooms","se1_8_timemkt","yearselec","duration_day"), .funs = c(scale = ~as.numeric(arm::rescale(., )))) %>% ungroup()
+x_rescale_nopool<- x_nopool%>% dplyr::select(se1_6_educ_scale,se3_6_nrdwelrooms_scale,
+                                        duration_day_scale,se1_8_timemkt_scale,yearselec_scale)
+    
+
