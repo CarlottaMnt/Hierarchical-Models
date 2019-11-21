@@ -5,5 +5,5 @@ The hierarchical structure allows to infer the regression parameters for several
 Weakly informative hyper-prior distributions are used for all the three models.
 
 The reference for the project are:
-1- https://mc-stan.org/users/documentation///
-2- Gelman et al. "Bayesian data Analysis"(2013).
+1- https://mc-stan.org/users/documentation/.
+2- Gelman et al. "Bayesian Data Analysis"(2013).
