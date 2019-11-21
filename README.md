@@ -7,6 +7,9 @@ Through the different model specifications, the parameters are estimated with a 
 For this last model, weakly informative hyper-prior distributions are used.
 
 The reference for the project are:
+
 1- https://mc-stan.org/users/documentation/.
+
 2- A.Gelman et al. "Bayesian Data Analysis"(2013).
-3- A.Gelman, J.Hill "Data Analysis using regression and Multilevel/Hierarchical Models
+
+3- A.Gelman, J.Hill "Data Analysis using regression and Multilevel/Hierarchical Models (2007).
