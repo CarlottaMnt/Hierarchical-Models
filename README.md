@@ -16,4 +16,4 @@ The main reference for the project are:
 
 2- A.Gelman et al. "Bayesian Data Analysis"(2013).
 
-3- A.Gelman, J.Hill "Data Analysis using regression and Multilevel/Hierarchical Models (2007).
+3- A.Gelman, J.Hill "Data Analysis using regression and Multilevel/Hierarchical Models "(2007).
